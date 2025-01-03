@@ -15,6 +15,18 @@ Implementing GPT2 from scratch! Built with PyTorch, pandas, HuggingFace transfor
 
 **Bigram models** predict the probability of a word based solely on the preceding word. They analyze text by counting the occurrences of word pairs (bigrams) and use these counts to estimate the likelihood of one word following another. This simple approach captures some local context but doesn't account for longer-range dependencies in language. You'll implement a bigram model in the notebook below, and see how it performs on a short piece of input text. 
 
+# Attention
+
+GPT-2 employs **masked self-attention**, an important mechanism for its language modeling capabilities. 
+* Standard self-attention allows each word to consider all other words in a sequence. However, GPT-2 uses a "mask" to prevent each word from attending to subsequent words. This ensures that predictions are based solely on preceding context, maintaining the autoregressive property necessary for generating text sequentially. 
+* This masked approach forces the model to predict the next word based on the words already generated, mirroring how humans understand and produce language.
+
+This masked self-attention is further enhanced by being multi-headed and using scaled dot-product attention. 
+* Multi-head attention (which we'll get into later) allows the model to learn various relationships between words simultaneously, capturing more nuanced linguistic patterns. 
+* Scaled dot-product attention calculates the importance of each word based on the dot product of Query and Key vectors, scaled for stability. 
+
+Together, these features enable GPT-2 to effectively capture contextual information within a text sequence while adhering to the constraints of sequential prediction.
+
 ## Attention transformer (gpt2_attention_transformer.ipynb)
 
 In the following notebook, we will be implementing an attention transformer in PyTorch. We'll accomplish this by implementing each of the following:
