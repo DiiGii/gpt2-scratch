@@ -1,4 +1,6 @@
 # gpt2-scratch
+
+## Overview
 Implementing GPT2 from scratch! Built with PyTorch, pandas, HuggingFace transformers library, and more!
 - Access each Colab notebook to see code implementations of core functionalities 
 - Read topic summaries for each Colab notebook below 👇
