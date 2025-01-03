@@ -58,9 +58,10 @@ In the code below, we will explore 3 stochastic decoding methods:
 - **Top-k sampling**: This involves selecting the k most likely next words and then sampling from them according to their probabilities. This limits the model's choices to the most promising candidates while still introducing some randomness. 
 - **Top-p (nucleus) sampling**: This is similar to top-k sampling, but instead of selecting a fixed number of words, it selects the smallest set of words whose cumulative probability exceeds a threshold p. This dynamically adjusts the number of candidates based on the probability distribution.
 
-# Full transformer (gpt2_full_transformer.ipynb)
+## Full transformer (gpt2_full_transformer.ipynb)
 
 Putting together everything we've learned, we'll implement a full transformer and have it generate some text!
 
 ---
+
 Huge credit and props to the team over at ACM AI. They were a huge help in tackling the code and helping me solidify my understanding of the theoretical concepts behind this project. 
