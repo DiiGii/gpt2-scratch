@@ -7,6 +7,9 @@ Implementing GPT2 from scratch! Built with PyTorch, pandas, HuggingFace transfor
 
 ---
 
+## Bigram Models (gpt2_bigram_models.ipynb)
+
+**Bigram models** predict the probability of a word based solely on the preceding word. They analyze text by counting the occurrences of word pairs (bigrams) and use these counts to estimate the likelihood of one word following another. This simple approach captures some local context but doesn't account for longer-range dependencies in language. You'll implement a bigram model in the notebook below, and see how it performs on a short piece of input text. 
 
 ## Attention transformer (gpt2_attention_transformer.ipynb)
 
